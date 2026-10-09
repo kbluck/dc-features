@@ -1,0 +1,51 @@
+{
+  "image": "ghcr.io/kbluck/dc-busybox:latest",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "json.schemas": [{
+          "fileMatch": [ "*/devcontainer-feature.json" ],
+          "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
+        }]
+      },
+      "extensions": []
+    }
+  },
+  "features": {
+    "./src/apk-ssh-client": {
+        "with_docs":      true,
+        "with_keysign":   true,
+        "with_kerberos":  false,
+        "with_sk_helper": false
+    },
+    "./src/apk-git-client": {
+        "with_docs":        true,
+        "with_git_lfs":     true,
+        "with_git_prompt":  true,
+        "with_git_scalar":  true,
+        "with_git_sizer":   true,
+        "with_git_subtree": true
+    },
+    "./src/apk-bash": {
+        "with_docs":            true,
+        "with_bash_completion": true,
+        "set_as_bin_sh":        false
+    },
+    "./src/apk-zsh": {
+      "with_docs":                     true,
+      "with_oh_my_zsh":                true,
+      "with_calendar":                 false,
+      "with_extra_completions":        false,
+      "with_fast_syntax_highlighting": false,
+      "with_fish_autosuggestions":     false,
+      "with_fish_history_search":      false,
+      "with_fish_syntax_highlighting": false,
+      "with_multiword_history_search": false,
+      "with_pcre":                     false,
+      "with_shift_select":             false,
+      "with_vcs":                      false,
+      "with_zftp":                     false,
+      "set_as_bin_sh":                 true
+    }
+  }
+}
