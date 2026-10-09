@@ -1,0 +1,47 @@
+{
+  "id":          "apk-git-client",
+  "version":     "1.0.0",
+  "name":        "APK Git Client",
+  "description": "Install the Git CLI client from the APK package manager, optionally with Git-LFS and other plugins.",
+  "options": {
+    "with_docs": {
+      "description": "Install Git documentation?",
+      "type":        "boolean",
+      "default":     true
+    },
+    "with_git_lfs": {
+      "description": "Install plugin \"git-lfs\"?",
+      "type":        "boolean",
+      "default":     true
+    },
+    "with_git_prompt": {
+      "description": "Install plugin \"git-prompt\"?",
+      "type":        "boolean",
+      "default":     true
+    },
+    "with_git_scalar": {
+      "description": "Install plugin \"git-scalar\"?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_git_sizer": {
+      "description": "Install utility \"git-sizer\"?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_git_subtree": {
+      "description": "Install plugin \"git-subtree\"?",
+      "type":        "boolean",
+      "default":     false
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "github.copilot.chat.codeGeneration.instructions": [{
+          "text": "This dev container includes the Git CLI client, installed from the APK package manager."
+        }]
+      }
+    }
+  }
+}
