@@ -1,0 +1,37 @@
+{
+  "id":          "apk-ssh-client",
+  "version":     "1.0.0",
+  "name":        "APK SSH Client",
+  "description": "Install the CLI SSH client from the APK package manager.",
+  "options": {
+    "with_docs": {
+      "description": "Install SSH documentation?",
+      "type":        "boolean",
+      "default":     true
+    },
+    "with_keysign": {
+      "description": "Install ssh-keysign helper program for host-based authentication?",
+      "type":        "boolean",
+      "default":     true
+    },
+    "with_kerberos": {
+      "description": "Install SSH client with Kerberos support?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_sk_helper": {
+      "description": "Install libfido2 security key helper?",
+      "type":        "boolean",
+      "default":     false
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "github.copilot.chat.codeGeneration.instructions": [{
+          "text": "This dev container includes the SSH CLI client, installed from the APK package manager."
+        }]
+      }
+    }
+  }
+}
