@@ -1,0 +1,32 @@
+{
+  "id":          "apk-bash",
+  "version":     "1.0.0",
+  "name":        "APK Bash shell",
+  "description": "Install the Bash shell from the APK package manager.",
+  "options": {
+    "with_completion": {
+      "description": "Install Bash CLI tab-completion?",
+      "type":        "boolean",
+      "default":     true
+    },
+    "with_docs": {
+      "description": "Install Bash documentation?",
+      "type":        "boolean",
+      "default":     true
+    },
+    "set_as_bin_sh": {
+      "description": "Install Bash as /bin/sh?",
+      "type":        "boolean",
+      "default":     false
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "github.copilot.chat.codeGeneration.instructions": [{
+          "text": "This dev container includes the Bash shell, installed from the APK package manager."
+        }]
+      }
+    }
+  }
+}
