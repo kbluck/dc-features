@@ -1,0 +1,87 @@
+{
+  "id":          "apk-zsh",
+  "version":     "1.0.0",
+  "name":        "APK Zsh Shell",
+  "description": "Install the Zsh shell from the APK package manager.",
+  "options": {
+    "with_docs": {
+      "description": "Install documentation?",
+      "type":        "boolean",
+      "default":     true
+    },
+    "with_oh_my_zsh": {
+      "description": "Install Oh My Zsh?",
+      "type":        "boolean",
+      "default":     true
+    },
+    "with_calendar": {
+      "description": "Install calendar function system?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_extra_completions": {
+      "description": "Install extra community completions?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_fast_syntax_highlighting": {
+      "description": "Install fast syntax highlighting?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_fish_autosuggestions": {
+      "description": "Install Fish-like autosuggestions?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_fish_history_search": {
+      "description": "Install Fish-like history search?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_fish_syntax_highlighting": {
+      "description": "Install Fish-like syntax highlighting?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_multiword_history_search": {
+      "description": "Bind Ctrl-R to a widget that searches for multiple keywords in an AND fashion?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_pcre": {
+      "description": "Install PCRE module?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_shift_select": {
+      "description": "Install shift-selection of text?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_vcs": {
+      "description": "Install VCS information module?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "with_zftp": {
+      "description": "Install ZFTP function system?",
+      "type":        "boolean",
+      "default":     false
+    },
+    "set_as_bin_sh": {
+      "description": "Install Zsh as /bin/sh?",
+      "type":        "boolean",
+      "default":     false
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "github.copilot.chat.codeGeneration.instructions": [{
+          "text": "This dev container includes the Zsh shell, installed from the APK package manager."
+        }]
+      }
+    }
+  }
+}
